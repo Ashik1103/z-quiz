@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:z_quiz/screens/js_material.dart';
+import 'package:z_quiz/screens/points_page.dart';
+import 'package:z_quiz/screens/c_quiz.dart';
 import 'package:z_quiz/screens/homePage.dart';
 import 'package:z_quiz/screens/landingPage.dart';
 import 'package:z_quiz/screens/login_page.dart';
@@ -15,8 +18,12 @@ class Router {
         return MaterialPageRoute(builder: (context) => Login());
       case '/home':
         return MaterialPageRoute(builder: (context) => Home());
-
-
+      case '/c_quiz':
+        return MaterialPageRoute(builder: (context) => CQuiz());
+      case '/points':
+        return MaterialPageRoute(builder: (context) => Points());        
+      case '/js_material':
+        return MaterialPageRoute(builder: (context) => JsMaterial());
     }
   }
 }

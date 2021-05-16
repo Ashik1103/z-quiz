@@ -92,15 +92,16 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 SizedBox(
-                  height: 30.h,
+                  height: 10.h,
                 ),
                 Row(
                   children: [
                     SizedBox(
-                      width: 30.w,
+                      width: 20.w,
                     ),
                     GestureDetector(
                       onTap: () {
+                        Navigator.pushNamed(context, '/js_material');
                       },
                       child: Container(
                           decoration: BoxDecoration(
@@ -138,10 +139,11 @@ class _HomeState extends State<Home> {
                           )),
                     ),
                     SizedBox(
-                      width: 20.w,
+                      width: 35.w,
                     ),
                     GestureDetector(
                       onTap: () {
+                        Navigator.pushNamed(context, '/c_quiz');
                       },
                       child: Container(
                           decoration: BoxDecoration(
@@ -180,7 +182,49 @@ class _HomeState extends State<Home> {
                     ),
                   ],
                 ),
-                SizedBox(height: 20.h),
+                 Padding(
+                   padding:  EdgeInsets.only(left:130.w,top:10.h),
+                   child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/c_quiz');
+                        },
+                        child: Container(
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: AssetImage('assets/images/pink.jpeg')),
+                                border: Border.all(
+                                  color: Colors.blue,
+                                ),
+                                borderRadius: BorderRadius.circular(40)),
+                            // color: Colors.white,
+                            width: 120.w,
+                            height: 120.h,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Center(
+                                  child: Text(
+                                    'Python',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: ScreenUtil().setSp(17)),
+                                  ),
+                                ),
+                                Container(
+                                  width: 70.w,
+                                  height: 15.h,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(40),
+                                  ),
+                                  child: Center(child: Icon(Icons.play_arrow)),
+                                )
+                              ],
+                            )),
+                      ),
+                 ),
+                SizedBox(height: 10.h),
                 Row(
                   children: [
                     SizedBox(
@@ -188,6 +232,7 @@ class _HomeState extends State<Home> {
                     ),
                     GestureDetector(
                       onTap: () {
+                        Navigator.pushNamed(context, '/c_quiz');
                       },
                       child: Container(
                           decoration: BoxDecoration(
@@ -226,10 +271,11 @@ class _HomeState extends State<Home> {
                           )),
                     ),
                     SizedBox(
-                      width: 20.w,
+                      width: 35.w,
                     ),
                     GestureDetector(
                       onTap: () {
+                        Navigator.pushNamed(context, '/c_quiz');
                       },
                       child: Container(
                           decoration: BoxDecoration(
@@ -269,7 +315,7 @@ class _HomeState extends State<Home> {
                   ],
                 ),
                 SizedBox(
-                  height: 80.h,
+                  height: 15.h,
                 ),
                 Row(
                   children: [
@@ -312,7 +358,7 @@ class _HomeState extends State<Home> {
                       ),
                     ), GestureDetector(
                       onTap: () {
-                      },
+                        },
                       child: Padding(
                         padding: EdgeInsets.only(
                           left: 80.w,

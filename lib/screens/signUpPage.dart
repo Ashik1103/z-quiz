@@ -15,7 +15,6 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
  final FirebaseAuth _auth = FirebaseAuth.instance;
-  // final GlobalKey<FormState> _formKey = GlobalKey<FormState>();  ///////not needed
     final _formKey = GlobalKey<FormState>();
 
   String _email, _password, _confirmPassword,_username;
@@ -31,7 +30,6 @@ class _SignUpState extends State<SignUp> {
   checkAuthentication() async {
     _auth.onAuthStateChanged.listen((user) {
       if (user != null) {
-        // Navigator.of(context).pop();
 
         Navigator.pushReplacementNamed(context,'/home');
       }
@@ -53,7 +51,6 @@ class _SignUpState extends State<SignUp> {
               'email': _email,
               'username':_username,
             });
-            print('i printed this uid '+UserDetails().uid);
           }
         } catch (e) {
           showError("assets/images/iconImg/sad_face.png", e.message, context);
@@ -72,13 +69,11 @@ class _SignUpState extends State<SignUp> {
 
       body: SafeArea(
         child:
-          // SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
           Container(
                   constraints: BoxConstraints.expand(),
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft, end: Alignment.bottomRight,
-                  // stops: [0.1, 0.9],
                   colors: <Color>[Color(0xff0000ff), Color(0xffafeeee)])),
               
             child: Column(
@@ -101,7 +96,7 @@ class _SignUpState extends State<SignUp> {
                      ),
                   ],
                 ),
-                SizedBox(height: 20.h,),
+                SizedBox(height: 10.h,),
                  Padding(
                    padding:  EdgeInsets.only(left:138.w),
                    child: Image(
@@ -110,13 +105,13 @@ class _SignUpState extends State<SignUp> {
                           ),
                           width: 70.w,
                           height: 90.h,
-                          // height: 600,
                         ),
                  ),
-                Spacer(flex: 1), //2/6
+                SizedBox(
+                  height: 10.h,
+                ),
                
                
-                // 1/6
                 Form(
             key: _formKey,
 
@@ -134,7 +129,6 @@ class _SignUpState extends State<SignUp> {
                     decoration: InputDecoration( 
                       
                       filled: true,
-                      // fillColor: Color(0xFF1C2341),
                       fillColor: Colors.white,
                       hintText: "email",
                       border: OutlineInputBorder(
@@ -150,7 +144,6 @@ class _SignUpState extends State<SignUp> {
                   decoration: InputDecoration( 
                     
                     filled: true,
-                    // fillColor: Color(0xFF1C2341),
                     fillColor: Colors.white,
                     hintText: "UserName",
                     border: OutlineInputBorder(
@@ -180,7 +173,6 @@ class _SignUpState extends State<SignUp> {
                     decoration: InputDecoration( 
                       
                       filled: true,
-                      // fillColor: Color(0xFF1C2341),
                       fillColor: Colors.white,
                       hintText: "Password",
                       border: OutlineInputBorder(
@@ -203,7 +195,6 @@ class _SignUpState extends State<SignUp> {
                     decoration: InputDecoration( 
                       
                       filled: true,
-                      // fillColor: Color(0xFF1C2341),
                       fillColor: Colors.white,
                       hintText: "confirm Password",
                       border: OutlineInputBorder(
@@ -215,8 +206,9 @@ class _SignUpState extends State<SignUp> {
                     ],
                   ),
                 ),
-                
-                Spacer(), // 1/6
+                SizedBox(
+                  height: 130.h,
+                ),
                 Center(
                   child: GestureDetector(
                  onTap: () =>
@@ -246,34 +238,7 @@ class _SignUpState extends State<SignUp> {
                 ), 
                 ),
                 SizedBox(height: 20.h,),
-               Center(
-                 child: GestureDetector(
-                  onTap: () => Authentication().googleSignIn(),
-
-                  child: Container(
-                    width: 170.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Row(
-                      children: [SizedBox(width: 5.w,),
-                        Image(
-                          image: AssetImage('assets/images/Google_image.png'),
-                          width: 25.w,
-                        ),
-                        SizedBox(
-                          width: 10.w,
-                        ),
-                        Text('Sign up with Google',
-                        style: TextStyle(fontSize: ScreenUtil().setSp(14),fontWeight: FontWeight.w600,color: Colors.white),
-                        )
-                      ],
-                    ),
-                  ),
-              ),
-               ),
+               
                 Spacer(flex: 2), // it will take 2/6 spaces
               ],
             ),

@@ -76,22 +76,28 @@ class _LoginState extends State<Login> {
                 height: 40.h,
               ),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    IconButton(icon: Icon(Icons.arrow_back,size: ScreenUtil().setSp(30),color: Colors.white,), onPressed: (){
-                      Navigator.pop(context);
-                    }),
-                     Padding(
-                       padding:  EdgeInsets.only(left:105.w),
-                       child: Text(
-                  "Login",
-                  style: Theme.of(context).textTheme.headline4.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                     ),
-                  ],
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  IconButton(
+                      icon: Icon(
+                        Icons.arrow_back,
+                        size: ScreenUtil().setSp(30),
+                        color: Colors.white,
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      }),
+                  Padding(
+                    padding: EdgeInsets.only(left: 105.w),
+                    child: Text(
+                      "Login",
+                      style: Theme.of(context).textTheme.headline4.copyWith(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              ),
               SizedBox(height: 30.h),
               Center(
                 child: Container(
@@ -147,61 +153,32 @@ class _LoginState extends State<Login> {
                 ],
               ),
 
-              SizedBox(height: 30.h,),// 1/6
+              SizedBox(
+                height: 100.h,
+              ), 
               GestureDetector(
-                 onTap: () =>
-                      login(_emailController.text, _passwordController.text),
-                  child: Container(
-                    width: 132.w,
-                    height: 36.h,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        width: 2
-,color: Colors.white                      ),
-                      color: Color(0xff1E90FF),
-                      borderRadius: BorderRadius.circular(30)
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Login',
-                        
-                        
-                        style: TextStyle(
-                          fontSize: ScreenUtil().setSp(14),
-                          color: Colors.white
-                        ),
-                      ),
-                    ),
-                  ),
-                ),         SizedBox(height: 30.h,),// 1/6
-
-              GestureDetector(
-                onTap: () => Authentication().googleSignIn(),
-
+                onTap: () =>
+                    login(_emailController.text, _passwordController.text),
                 child: Container(
-                  width: 170.w,
-                  height: 40.h,
+                  width: 132.w,
+                  height: 36.h,
                   decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    children: [SizedBox(width: 5.w,),
-                      Image(
-                        image: AssetImage('assets/images/Google_image.png'),
-                        width: 25.w,
-                      ),
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Text('Sign in with Google',
-                      style: TextStyle(fontSize: ScreenUtil().setSp(14),fontWeight: FontWeight.w600,color: Colors.white),
-                      )
-                    ],
+                      border: Border.all(width: 2, color: Colors.white),
+                      color: Color(0xff1E90FF),
+                      borderRadius: BorderRadius.circular(30)),
+                  child: Center(
+                    child: Text(
+                      'Login',
+                      style: TextStyle(
+                          fontSize: ScreenUtil().setSp(14),
+                          color: Colors.white),
+                    ),
                   ),
                 ),
               ),
-              Spacer(flex: 1), // it will take 2/6 spaces
+              // SizedBox(
+              //   height: 30.h,
+              // ),
             ],
           ),
         ),
@@ -209,5 +186,3 @@ class _LoginState extends State<Login> {
     );
   }
 }
-            
- 

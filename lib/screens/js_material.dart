@@ -27,15 +27,7 @@ class _JsMaterialState extends State<JsMaterial> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  // Container(
-                  //     height: 200.h,
-                  //     child: ChewieList(
-                  //       videoPlayerController: VideoPlayerController
-                  //       .asset(
-                  //           'assets/videos/js.mp4'),
-                  //       // .network('https://youtu.be/AM-yohW7aiw'),
-                  //       looping: true,
-                  //     )),
+             
                    Padding(
                      padding:  EdgeInsets.only(left:278.w),
                      child: IconButton(

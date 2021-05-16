@@ -10,12 +10,14 @@ class Points extends StatelessWidget {
   Points({@required this.finalPoints});
   @override
   Widget build(BuildContext context) {
-    //  Firestore.instance.collection('points').document().setData({
-    //          'points':Get.arguments*10,
-    //          'username':UserDetails().username,
-    //          'uid':UserDetails().uid,
-    //          'type':'Mobile'
-    //         });
+    
+     Firestore.instance.collection('points').document().setData({
+             'points':Get.arguments*10,
+            // 'points':val,
+             'username':UserDetails().username,
+             'uid':UserDetails().uid,
+             'type':'Mobile'
+            });
     // print('points page printing uid'+UserDetails().username);
     QuestionController _qnController = Get.put(QuestionController());
     return Scaffold(

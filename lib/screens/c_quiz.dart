@@ -63,7 +63,6 @@ class CQuiz extends StatelessWidget {
                       child: PageView.builder(
                     
                         
-                        // physics: NeverScrollableScrollPhysics(),
                         controller: _questionController.pageController,
                         itemCount: _questionController.questions.length,
                         onPageChanged: _questionController.updateTheQnNum,

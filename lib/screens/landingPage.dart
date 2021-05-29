@@ -67,7 +67,7 @@ class _LandingPageState extends State<LandingPage> {
                             fontWeight: FontWeight.w900,
                             fontStyle: FontStyle.italic,
                             color: Colors.white,
-                            fontSize: ScreenUtil().setSp(39)),
+                            fontSize: ScreenUtil().setSp(35)),
                       ),
                     ),
                   ],

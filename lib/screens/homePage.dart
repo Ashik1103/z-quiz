@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    print(UserDetails().uid);
+    // print("wewew"+UserDetails().email);
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -84,8 +84,8 @@ class _HomeState extends State<Home> {
                 ),
                 Row(
                   children: [
-                    SizedBox(
-                      width: 30.w,
+                     SizedBox(
+                      width: 20.w,
                     ),
                     GestureDetector(
                       onTap: () {
@@ -113,6 +113,7 @@ class _HomeState extends State<Home> {
                                       fontSize: ScreenUtil().setSp(17)),
                                 ),
                               ),
+                              SizedBox(height: 20.h,),
                               Container(
                                 width: 70.w,
                                 height: 15.h,
@@ -125,8 +126,8 @@ class _HomeState extends State<Home> {
                             ],
                           )),
                     ),
-                    SizedBox(
-                      width: 40.w,
+                  SizedBox(
+                      width: 30.w,
                     ),
                     GestureDetector(
                       onTap: () {
@@ -142,8 +143,8 @@ class _HomeState extends State<Home> {
                               ),
                               borderRadius: BorderRadius.circular(40)),
                           // color: Colors.white,
-                          width: 120.w,
-                          height: 120.h,
+                         width: 125.w,
+                          height: 130.h,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -155,6 +156,8 @@ class _HomeState extends State<Home> {
                                       fontSize: ScreenUtil().setSp(17)),
                                 ),
                               ),
+                                                            SizedBox(height: 20.h,),
+
                               Container(
                                 width: 70.w,
                                 height: 15.h,
@@ -204,6 +207,8 @@ class _HomeState extends State<Home> {
                                       fontSize: ScreenUtil().setSp(17)),
                                 ),
                               ),
+                                                            SizedBox(height: 20.h,),
+
                               Container(
                                 width: 70.w,
                                 height: 15.h,
@@ -221,20 +226,22 @@ class _HomeState extends State<Home> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/bootstrap_material');
+                        // Navigator.pushNamed(context, '/bootstrap_material');
+                      Navigator.pushNamed(context, '/');
+
                       },
                       child: Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   fit: BoxFit.fill,
-                                  image: AssetImage('assets/images/green.jpeg')),
+                                  image: AssetImage('assets/images/gold.jpeg')),
                               border: Border.all(
                                 color: Colors.blue,
                               ),
                               borderRadius: BorderRadius.circular(40)),
                           // color: Colors.white,
-                          width: 120.w,
-                          height: 120.h,
+                           width: 125.w,
+                          height: 130.h,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -246,6 +253,8 @@ class _HomeState extends State<Home> {
                                       fontSize: ScreenUtil().setSp(17)),
                                 ),
                               ),
+                                                            SizedBox(height: 20.h,),
+
                               Container(
                                 width: 70.w,
                                 height: 15.h,

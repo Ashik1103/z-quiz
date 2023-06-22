@@ -13,12 +13,10 @@ class Points extends StatelessWidget {
     
      Firestore.instance.collection('points').document().setData({
              'points':Get.arguments*10,
-            // 'points':val,
              'username':UserDetails().username,
              'uid':UserDetails().uid,
              'type':'Mobile'
             });
-    // print('points page printing uid'+UserDetails().username);
     QuestionController _qnController = Get.put(QuestionController());
     return Scaffold(
       body: SafeArea(
@@ -27,10 +25,8 @@ class Points extends StatelessWidget {
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.topLeft, end: Alignment.bottomRight,
-                      // stops: [0.1, 0.9],
                       colors: <Color>[Color(0xff0000ff), Color(0xffafeeee)])),
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
                     height: 200.h,
@@ -42,13 +38,11 @@ class Points extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         fontSize: ScreenUtil().setSp(40)),
                   ),
-                  // Spacer(),
                   SizedBox(height: 100.h),
                   Text(
                     // "${_qnController.correctAns *10}/${_qnController.questions.length*10}",
                                         "${Get.arguments*10}/${_qnController.questions.length*10}",
 
-                    // '60/100',
 
                     style: TextStyle(
                         color: Colors.black,

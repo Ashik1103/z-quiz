@@ -11,8 +11,6 @@ class Authentication {
     checkAuthentication() async {
       auth.onAuthStateChanged.listen((user) {
         if (user != null) {
-          // Navigator.of(context).pop();
-
           MaterialPageRoute(builder: (context) => Home());
         }
       });

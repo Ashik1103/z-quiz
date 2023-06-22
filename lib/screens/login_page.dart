@@ -50,7 +50,6 @@ class _LoginState extends State<Login> {
   checkAuthentication() {
     _auth.onAuthStateChanged.listen((user) async {
       if (user != null) {
-        // Navigator.of(context).pop();
         Navigator.pushReplacementNamed(context, '/home');
       }
     });
@@ -66,13 +65,11 @@ class _LoginState extends State<Login> {
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft, end: Alignment.bottomRight,
-                  // stops: [0.1, 0.9],
                   colors: <Color>[Color(0xff0000ff), Color(0xffafeeee)])),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Spacer(flex: 2), //2/6
                 SizedBox(
                   height: 40.h,
                 ),
@@ -113,9 +110,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 SizedBox(height: 20.h),
-                // Spacer(), // 1/6
                 Column(
-                  // mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       margin: EdgeInsets.only(left: 40.w, right: 40.w),
@@ -123,7 +118,6 @@ class _LoginState extends State<Login> {
                         controller: _emailController,
                         decoration: InputDecoration(
                           filled: true,
-                          // fillColor: Color(0xFF1C2341),
                           fillColor: Colors.white,
                           hintText: "email",
                           border: OutlineInputBorder(
@@ -142,7 +136,6 @@ class _LoginState extends State<Login> {
                         controller: _passwordController,
                         decoration: InputDecoration(
                           filled: true,
-                          // fillColor: Color(0xFF1C2341),
                           fillColor: Colors.white,
                           hintText: "Password",
                           border: OutlineInputBorder(

@@ -12,19 +12,17 @@ class LeaderBoard extends StatefulWidget {
 
 class _LeaderBoardState extends State<LeaderBoard> {
   Firestore db = Firestore.instance;
-  //  var numm;
-  Num()async{
-    print("hii::::::::::::::");
-  final numm= await  Firestore.instance.collection('points').snapshots().length;
-    print("number::::::::"+numm.toString());
+  // Num()async{
+  //   print("hii::::::::::::::");
+  // final numm= await  Firestore.instance.collection('points').snapshots().length;
+  //   print("number::::::::"+numm.toString());
 
-  }
+  // }
 
  
 
   @override
   Widget build(BuildContext context) {
-    // print("number::::::::"+numm.toString());
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(50.h),
@@ -59,7 +57,6 @@ class _LeaderBoardState extends State<LeaderBoard> {
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.topLeft, end: Alignment.bottomRight,
-                      // stops: [0.1, 0.9],
                       colors: <Color>[Color(0xff0000ff), Color(0xffafeeee)])),
               child: Padding(
                 padding:  EdgeInsets.only(top:38.h,left:10.w,right:10.w),
@@ -103,7 +100,6 @@ class _LeaderBoardState extends State<LeaderBoard> {
                        Container(
                         height: 30.h,
                         width: 50.w,
-                        // color: Colors.pink,
                         child: StreamBuilder(
                           stream: db
                               .collection('points')
@@ -136,7 +132,6 @@ class _LeaderBoardState extends State<LeaderBoard> {
                       Container(
                         height: 30.h,
                         width: 50.w,
-                        // color: Colors.pink,
                         child: StreamBuilder(
                           stream: db
                               .collection('points')
@@ -173,7 +168,6 @@ class _LeaderBoardState extends State<LeaderBoard> {
                       Container(
                         height: 30.h,
                         width: 50.w,
-                        // color: Colors.pink,
                         child: StreamBuilder(
                           stream: db
                               .collection('points')
@@ -206,7 +200,6 @@ class _LeaderBoardState extends State<LeaderBoard> {
                       Container(
                         height: 30.h,
                         width: 50.w,
-                        // color: Colors.pink,
                         child: StreamBuilder(
                           stream: db
                               .collection('points')
@@ -243,7 +236,6 @@ class _LeaderBoardState extends State<LeaderBoard> {
                       Container(
                         height: 30.h,
                         width: 50.w,
-                        // color: Colors.pink,
                         child: StreamBuilder(
                           stream: db
                               .collection('points')
@@ -276,7 +268,6 @@ class _LeaderBoardState extends State<LeaderBoard> {
                       Container(
                         height: 30.h,
                         width: 50.w,
-                        // color: Colors.pink,
                         child: StreamBuilder(
                           stream: db
                               .collection('points')
@@ -313,7 +304,6 @@ class _LeaderBoardState extends State<LeaderBoard> {
                       Container(
                         height: 30.h,
                         width: 50.w,
-                        // color: Colors.pink,
                         child: StreamBuilder(
                           stream: db
                               .collection('points')
@@ -346,7 +336,6 @@ class _LeaderBoardState extends State<LeaderBoard> {
                       Container(
                         height: 30.h,
                         width: 50.w,
-                        // color: Colors.pink,e
                         child: StreamBuilder(
                           stream: db
                               .collection('points')

@@ -23,12 +23,12 @@ class _CssMaterialState extends State<CssMaterial> {
             constraints: BoxConstraints.expand(),
             decoration: BoxDecoration(
                 gradient: LinearGradient(
-                    begin: Alignment.topLeft, end: Alignment.bottomRight,
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
                     colors: <Color>[Color(0xff0000ff), Color(0xffafeeee)])),
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                
                   Padding(
                     padding: EdgeInsets.only(left: 278.w),
                     child: IconButton(
@@ -159,7 +159,6 @@ class _CssMaterialState extends State<CssMaterial> {
                       ),
                     ),
                   ),
-                  // Container(height: 300.h,child: Text('dataa'),)
                 ],
               ),
             )),

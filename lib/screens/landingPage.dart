@@ -16,17 +16,14 @@ class _LandingPageState extends State<LandingPage> {
         body: SafeArea(
             child: Stack(
       children: [
-        // SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
         Container(
-       constraints: BoxConstraints.expand(),
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    stops: [0.1, 0.9],
-                                        colors: <Color>[Color(0xff0000ff), Color(0xffafeeee)])),
-
-                    // colors: <Color>[Color(0xff1E90FF), Color(0xffafeeee)])),
+          constraints: BoxConstraints.expand(),
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  stops: [0.1, 0.9],
+                  colors: <Color>[Color(0xff0000ff), Color(0xffafeeee)])),
           child: SafeArea(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -55,7 +52,6 @@ class _LandingPageState extends State<LandingPage> {
                         ),
                         width: 70.w,
                         height: 90.h,
-                        // height: 600,
                       ),
                     ),
                     Positioned(
@@ -73,85 +69,70 @@ class _LandingPageState extends State<LandingPage> {
                   ],
                 ),
 
-                Spacer(), // 1/6
+                Spacer(),
                 Container(
                   width: 250.w,
                   height: 170.h,
-                  decoration: BoxDecoration(
-                    
-                  //  border: Border(left:  BorderSide(width: 4,color: Colors.white),
-                  //             right: BorderSide(width:0),
-                  //             top: BorderSide(width: 0),
-                  //             bottom:  BorderSide(width: 2,color: Colors.white),
-          
-      
-                  //   ),
-                    // color: Colors.white
-                  ),
-                  child: Image(fit: BoxFit.cover,
+                  decoration: BoxDecoration(),
+                  child: Image(
+                    fit: BoxFit.cover,
                     width: 300.w,
                     height: 100.h,
                     image: AssetImage('assets/images/coding.jpeg'),
                   ),
                 ),
-                Spacer(), // 1/6
+                Spacer(),
                 GestureDetector(
-                  onTap:(){
-                                            Navigator.pushNamed(context,'/login');
-
-                  } ,
+                  onTap: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
                   child: Container(
                     width: 132.w,
                     height: 36.h,
                     decoration: BoxDecoration(
-                      border: Border.all(
-                        width: 2
-,color: Colors.white                      ),
-                      color: Color(0xff1E90FF),
-                      borderRadius: BorderRadius.circular(30)
-                    ),
+                        border: Border.all(width: 2, color: Colors.white),
+                        color: Color(0xff1E90FF),
+                        borderRadius: BorderRadius.circular(30)),
                     child: Center(
                       child: Text(
                         'Login',
-                        
-                        
                         style: TextStyle(
-                          fontSize: ScreenUtil().setSp(14),
-                          color: Colors.white
-                        ),
+                            fontSize: ScreenUtil().setSp(14),
+                            color: Colors.white),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 10.h,),
-                 GestureDetector(onTap: () {
-                        Navigator.pushNamed(context,'/signup');
-                      },
-                   child: Center(
+                SizedBox(
+                  height: 10.h,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/signup');
+                  },
+                  child: Center(
                     child: Container(
-                    width: 132.w,
-                    height: 36.h,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30),
-                      border: Border.all(                      color: Color(0xff1E90FF)
-,width: 2)
-                    ),
+                      width: 132.w,
+                      height: 36.h,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(30),
+                          border:
+                              Border.all(color: Color(0xff1E90FF), width: 2)),
                       child: Center(
                         child: Text(
                           'Signup',
                           style: TextStyle(
                             fontSize: ScreenUtil().setSp(14),
-                      color: Color(0xff1E90FF),
+                            color: Color(0xff1E90FF),
                           ),
                         ),
                       ),
                     ),
+                  ),
                 ),
-                 ),
                 Spacer()
-                
-                // Spacer(flex: 2), // it will take 2/6 spaces
+
               ],
             ),
           ),

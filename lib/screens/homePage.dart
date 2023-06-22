@@ -32,7 +32,6 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    // print("wewew"+UserDetails().email);
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -142,7 +141,6 @@ class _HomeState extends State<Home> {
                                 color: Colors.blue,
                               ),
                               borderRadius: BorderRadius.circular(40)),
-                          // color: Colors.white,
                          width: 125.w,
                           height: 130.h,
                           child: Column(
@@ -193,7 +191,6 @@ class _HomeState extends State<Home> {
                                 color: Colors.blue,
                               ),
                               borderRadius: BorderRadius.circular(40)),
-                          // color: Colors.white,
                           width: 140.w,
                           height: 150.h,
                           child: Column(
@@ -226,8 +223,8 @@ class _HomeState extends State<Home> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        // Navigator.pushNamed(context, '/bootstrap_material');
-                      Navigator.pushNamed(context, '/');
+                        Navigator.pushNamed(context, '/bootstrap_material');
+                      // Navigator.pushNamed(context, '/');
 
                       },
                       child: Container(
@@ -239,7 +236,6 @@ class _HomeState extends State<Home> {
                                 color: Colors.blue,
                               ),
                               borderRadius: BorderRadius.circular(40)),
-                          // color: Colors.white,
                            width: 125.w,
                           height: 130.h,
                           child: Column(
@@ -285,7 +281,6 @@ class _HomeState extends State<Home> {
                         child: Container(
                            width: 35.w,
                               height: 30.h,
-                          //  height: 50.h,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(70)),

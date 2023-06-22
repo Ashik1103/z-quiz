@@ -22,7 +22,6 @@ class _JsMaterialState extends State<JsMaterial> {
             decoration: BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.topLeft, end: Alignment.bottomRight,
-                    // stops: [0.1, 0.9],
                     colors: <Color>[Color(0xff0000ff), Color(0xffafeeee)])),
             child: SingleChildScrollView(
               child: Column(
@@ -48,7 +47,6 @@ class _JsMaterialState extends State<JsMaterial> {
                    ),
                   Container(
                     height: big ? 270.h : 500.h,
-                    // width: 200.w,
                     child: SfPdfViewer.asset(
                       'assets/PDF/js2.pdf',
                     ),
@@ -133,7 +131,6 @@ class _JsMaterialState extends State<JsMaterial> {
                     ),
                   ),
                 ),   
-                  // Container(height: 300.h,child: Text('dataa'),)
                 ],
               ),
             )),

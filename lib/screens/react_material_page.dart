@@ -51,7 +51,6 @@ class _ReactMaterialState extends State<ReactMaterial> {
                    ),
                   Container(
                     height: big ? 270.h : 500.h,
-                    // width: 200.w,
                     child: SfPdfViewer.asset(
                       'assets/PDF/ReactJSNotes.pdf',
                     ),
